@@ -54,17 +54,15 @@ const CreateMeet = () => {
 			end_time: endTime,
 		};
 
-		console.log(process.env.REACT_APP_BASE_URL);
-
 		axios
 			.post(`https://calender-meet.herokuapp.com/api/meeting`, newMeet)
 			.then(res => {
-				console.log(res);
 				setLoading(false);
 				history.push("/");
 			})
 			.catch(err => {
 				console.log(err);
+				setError(err.message);
 				setLoading(false);
 			});
 	};

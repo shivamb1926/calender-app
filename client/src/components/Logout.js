@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import { Alert } from "react-bootstrap";
 
 const Logout = () => {
 	const [error, setError] = useState("");
@@ -19,9 +20,14 @@ const Logout = () => {
 			}
 		};
 		handleLogout();
-	}, []);
+	}, [history, logout]);
 
-	return <>Logging out</>;
+	return (
+		<>
+			Logging out
+			{error && <Alert variant="danger">{error}</Alert>}
+		</>
+	);
 };
 
 export default Logout;

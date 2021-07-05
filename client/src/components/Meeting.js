@@ -79,7 +79,6 @@ const Meeting = ({ data, update, setUpdate }) => {
 	};
 
 	const handleDelete = async () => {
-		console.log("deleting");
 		axios
 			.get(`https://calender-meet.herokuapp.com/api/delete/${data._id}`)
 			.then(res => {

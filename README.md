@@ -16,3 +16,7 @@ Install dependencies
 `cd client && npm install`
 
 `npm start`
+
+The signup page lets you create a new user account that can be used to create new meetings and view all upcoming meetings created by that particular user.
+
+You can also edit and delete the meetings.
