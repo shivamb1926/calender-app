@@ -9,6 +9,7 @@ const app = express();
 const apiPort = process.env.PORT || 4000;
 
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));

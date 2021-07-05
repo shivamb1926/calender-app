@@ -66,7 +66,6 @@ const CreateMeet = () => {
 			.catch(err => {
 				console.log(err);
 				setLoading(false);
-				setError(err);
 			});
 	};
 
