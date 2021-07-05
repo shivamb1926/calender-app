@@ -63,7 +63,7 @@ const Meeting = ({ data, update, setUpdate }) => {
 
 		axios
 			.post(
-				`${process.env.REACT_APP_BASE_URL}/api/update/${data._id}`,
+				`https://calender-meet.herokuapp.com/api/update/${data._id}`,
 				updatedMeet
 			)
 			.then(res => {
@@ -81,7 +81,7 @@ const Meeting = ({ data, update, setUpdate }) => {
 	const handleDelete = async () => {
 		console.log("deleting");
 		axios
-			.get(`${process.env.REACT_APP_BASE_URL}/api/delete/${data._id}`)
+			.get(`https://calender-meet.herokuapp.com/api/delete/${data._id}`)
 			.then(res => {
 				console.log(res);
 				setLoading(false);

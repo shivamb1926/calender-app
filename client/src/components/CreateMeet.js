@@ -54,8 +54,10 @@ const CreateMeet = () => {
 			end_time: endTime,
 		};
 
+		console.log(process.env.REACT_APP_BASE_URL);
+
 		axios
-			.post(`${process.env.REACT_APP_BASE_URL}/api/meeting`, newMeet)
+			.post(`https://calender-meet.herokuapp.com/api/meeting`, newMeet)
 			.then(res => {
 				console.log(res);
 				setLoading(false);

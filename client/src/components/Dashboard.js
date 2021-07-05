@@ -20,7 +20,7 @@ const Dashboard = () => {
 		const getData = async () => {
 			await axios
 				.get(
-					`${process.env.REACT_APP_BASE_URL}/api/meetings/${currentUser.email}`
+					`https://calender-meet.herokuapp.com/api/meetings/${currentUser.email}`
 				)
 				.then(res => {
 					setMeetings(res.data.data);
