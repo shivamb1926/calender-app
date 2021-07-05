@@ -1,0 +1,31 @@
+.nav-bar {
+	text-align: left;
+	height: 8vh;
+	background-color: #4e3791;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3vw;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo-heading {
+	font-weight: bolder;
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+.logout-button {
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+.logout-link {
+	text-decoration: none;
+	color: white;
+}
+
+.logout-link:hover {
+	color: white;
+}
