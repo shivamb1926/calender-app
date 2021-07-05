@@ -62,7 +62,10 @@ const Meeting = ({ data, update, setUpdate }) => {
 		};
 
 		axios
-			.post(`http://localhost:4000/api/update/${data._id}`, updatedMeet)
+			.post(
+				`${process.env.REACT_APP_BASE_URL}/api/update/${data._id}`,
+				updatedMeet
+			)
 			.then(res => {
 				console.log(res);
 				setLoading(false);
@@ -78,7 +81,7 @@ const Meeting = ({ data, update, setUpdate }) => {
 	const handleDelete = async () => {
 		console.log("deleting");
 		axios
-			.get(`http://localhost:4000/api/delete/${data._id}`)
+			.get(`${process.env.REACT_APP_BASE_URL}/api/delete/${data._id}`)
 			.then(res => {
 				console.log(res);
 				setLoading(false);

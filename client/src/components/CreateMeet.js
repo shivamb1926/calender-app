@@ -55,7 +55,7 @@ const CreateMeet = () => {
 		};
 
 		axios
-			.post("http://localhost:4000/api/meeting", newMeet)
+			.post(`${process.env.REACT_APP_BASE_URL}/api/meeting`, newMeet)
 			.then(res => {
 				console.log(res);
 				setLoading(false);
