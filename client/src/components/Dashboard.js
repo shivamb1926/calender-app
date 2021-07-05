@@ -19,7 +19,9 @@ const Dashboard = () => {
 	useEffect(() => {
 		const getData = async () => {
 			await axios
-				.get(`${process.env.REACT_APP_BASE_URL}/${currentUser.email}`)
+				.get(
+					`${process.env.REACT_APP_BASE_URL}/api/meetings/${currentUser.email}`
+				)
 				.then(res => {
 					setMeetings(res.data.data);
 					setBlank(false);
